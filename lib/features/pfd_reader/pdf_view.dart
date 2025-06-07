@@ -33,7 +33,10 @@ class _PdfHomeViewState extends State<PdfHomeView> {
       body:
           _pdfFile == null
               ? const Center(child: Text("Selecione um arquivo pdf"))
-              : PDFView(filePath: _pdfFile!.path),
+              : PDFView(
+                backgroundColor: Colors.deepOrange,
+                filePath: _pdfFile!.path,
+              ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: _pickPDF,
